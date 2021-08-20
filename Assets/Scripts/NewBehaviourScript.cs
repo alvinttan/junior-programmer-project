@@ -6,19 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public string test;
-    public Button yourButton;
+    public Button yourButton; // declare a button variable
 
     void Start()
     {
-        Button btn = yourButton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        Button btn = yourButton.GetComponent<Button>(); // assign the button variable to btn variable
+        btn.onClick.AddListener(TaskOnClick); // onclick function to listen for function attached
     }
-    public void Change(string s)
+    public void Change(string s) // this function is attached on the runtime of inputfield object
     {
         StateName.difficulty = s;
-        Debug.Log("this is the output :" + StateName.difficulty);
-        
+                
     }
     public void TaskOnClick()
     {

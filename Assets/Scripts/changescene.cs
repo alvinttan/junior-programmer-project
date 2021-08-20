@@ -6,17 +6,16 @@ using UnityEngine.UI;
 
 public class changescene : MonoBehaviour
 {
-    public Text difficulty;
+    public Text difficulty; // this is the text that display on the game's page
 
     public void Start()
     {
-        //difficulty.text = StateName.outtext;
-        difficulty.text = StateName.difficulty;
+        difficulty.text = StateName.difficulty; // assign static variable to the text 
     }
 
     public void goback()
     {
-       SceneManager.LoadScene("0");
+       SceneManager.LoadScene(1);
     }
 
 }
